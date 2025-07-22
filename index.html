@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Schwarz IT</title>
+    <style>
+        :root {
+            --schwarz-blue: #0050AA; /* Schwarz Group Blue */
+            --schwarz-gray: #F0F0F0; /* Light Gray for background */
+            --schwarz-text-dark: #333333; /* Dark gray for text */
+            --schwarz-accent-red: #E60A14; /* Schwarz Group Red */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--schwarz-gray);
+            color: var(--schwarz-text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--schwarz-blue);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        p {
+            font-size: 1.1em;
+            color: var(--schwarz-text-dark);
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: var(--schwarz-accent-red);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="schwarz-it-logo.png" alt="Schwarz IT Logo" class="logo">
+            <h1>Welcome to <span class="highlight">Schwarz IT</span>'s Nginx Server!</h1>
+        </header>
+        <main>
+            <p>This page is proudly served by <span class="highlight">Nginx</span>, customized with Schwarz IT branding, running seamlessly within a Docker container.</p>
+            <p>We are the technological heartbeat of Schwarz Group companies, responsible for the entire IT infrastructure and all software solutions.</p>
+            <p>Current server time: <span id="current-time"></span></p>
+        </main>
+        <footer>
+            &copy; 2025 Schwarz IT. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        // Update the current time dynamically
+        function updateTime() {
+            document.getElementById('current-time').innerText = new Date().toLocaleString();
+        }
+        setInterval(updateTime, 1000); // Update every second
+        updateTime(); // Initial call
+    </script>
+</body>
+</html>
