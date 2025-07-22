@@ -63,7 +63,7 @@ Containerize your personalized web server and make it available for deployment.
      
      ```
 
-### Task 4: Create a Team Space in Kubernetes
+### Task 4: Create a Kubernetes Cluster
 
 Organize your resources within the Kubernetes cluster.
 
@@ -128,7 +128,6 @@ Make your application accessible via a friendly domain name.
     ```bash
     stackit dns record-set create --zone-id 6e978c62-0b49-4087-b9cc-8bd0e7c9507a --name `<YOUR-DNS-NAME>` --record `<EXTERNAL-IP-from-Task-6>`
     ```
-
 
 ## Presentation Guidelines (Day 10)
 
