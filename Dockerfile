@@ -9,10 +9,10 @@ COPY index.html /usr/share/nginx/html/index.html
 
 # Copy your Schwarz IT logo file into the Nginx primary web root directory
 # Ensure the filename here matches the one you saved (e.g., schwarz-it-logo.png)
-CLONE schwarz-it-logo.png /usr/share/nginx/html/schwarz-it-logo.png
+COPY cat.png /usr/share/nginx/html/cat.png
 
 # Expose port 80 (the default HTTP port for Nginx)
-PORT 80
+EXPOSE 80
 
 # Command to run Nginx in the foreground when the container starts
 CMD ["nginx", "-g", "daemon off;"]
