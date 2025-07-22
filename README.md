@@ -126,10 +126,8 @@ Make your application accessible via a friendly domain name.
 * **Example Command (Conceptual - specific tool may vary based on your DNS provider):**
 
     ```bash
-    your-dns-cli create record A --zone-id 6e978c62-0b49-4087-b9cc-8bd0e7c9507a --name <your-chosen-hostname> --value <EXTERNAL-IP-from-Task-6>
+    stackit dns record-set create --zone-id 6e978c62-0b49-4087-b9cc-8bd0e7c9507a --name `<YOUR-DNS-NAME>` --record `<EXTERNAL-IP-from-Task-6>`
     ```
-
-    (Replace `your-dns-cli`, `<your-chosen-hostname>`, and `<EXTERNAL-IP-from-Task-6>` with your actual values and the command for your specific DNS management tool.)
 
 
 ## Presentation Guidelines (Day 10)
