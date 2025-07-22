@@ -82,7 +82,7 @@ Run your containerized web server within the cluster.
 
 * It should be configured to run **2 replicas** of your web server.
 
-* **Apply:** Apply this `deployment.yaml` file to your cluster in your team's namespace.
+* **Apply:** Apply this `deployment.yaml` file to your cluster.
 
 kubectl apply -f deployment.yaml
 
@@ -111,6 +111,27 @@ kubectl get svc -n
 
 Once you have the `EXTERNAL-IP`, open it in your web browser to see your personalized page live!
 
+### Task 7: Create a DNS Record
+
+Make your application accessible via a friendly domain name.
+
+* **Action:** Create a DNS A record that points your chosen hostname to the `EXTERNAL-IP` of your `LoadBalancer` Service (from Task 6).
+
+* **Requirements:**
+
+    * Choose a unique hostname for your application (e.g., `my-team-app`).
+
+    * Use the provided DNS zone ID: `6e978c62-0b49-4087-b9cc-8bd0e7c9507a`.
+
+* **Example Command (Conceptual - specific tool may vary based on your DNS provider):**
+
+    ```bash
+    your-dns-cli create record A --zone-id 6e978c62-0b49-4087-b9cc-8bd0e7c9507a --name <your-chosen-hostname> --value <EXTERNAL-IP-from-Task-6>
+    ```
+
+    (Replace `your-dns-cli`, `<your-chosen-hostname>`, and `<EXTERNAL-IP-from-Task-6>` with your actual values and the command for your specific DNS management tool.)
+
+
 ## Presentation Guidelines (Day 10)
 
 On the final day, you will present your completed project.
@@ -121,4 +142,6 @@ On the final day, you will present your completed project.
 
 * **Share Your Learnings:** Discuss the challenges you faced during the project and how you overcame them. Which new concepts did you find most interesting or useful?
 
-Good luck, and have fun building
+## Hint: You can use the provided application skeleton from the Git repository as a starting point for your project.
+
+Good luck, and have fun building!
